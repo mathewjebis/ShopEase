@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import {
   Paper,
   Typography,
@@ -21,7 +21,7 @@ const UpdateProduct = () => {
   const [updateProduct, setUpdateProduct] = useState({
     title: "",
     price: 500,
-    description: "Your perfect pack for everyday use and walks in the forest.",
+    description: "",
     category: "",
     image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png",
     rating: { rate: 0, count: 0 },
@@ -159,6 +159,16 @@ const UpdateProduct = () => {
             label="Image URL"
             variant="outlined"
             fullWidth
+            onChange={handleChange}
+          />
+          <TextField
+            value={updateProduct.description}
+            name="description"
+            label="Description"
+            variant="outlined"
+            fullWidth
+            multiline
+            rows={3}
             onChange={handleChange}
           />
 

@@ -1,4 +1,3 @@
-import Todoapp from "./Components/Todoapp";
 import Home from "./Components/Home";
 import Login from "./Components/Login";
 import Products from "./Components/Products";
@@ -25,7 +24,6 @@ function App() {
         </Route>
         <Route path="/login/:user" element={<Login />} />
         <Route path="/sign-up" element={<SignUp />} />
-        <Route path="/todo" element={<Todoapp />} />
         <Route path="/newProduct" element={<NewProduct />} />
         <Route path="/updateProduct/:id" element={<UpdateProduct />} />
         <Route path="/wishlist" element={<WishList />} />

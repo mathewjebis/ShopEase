@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import {
   Paper,
   Typography,
@@ -17,7 +17,7 @@ const NewProduct = () => {
   const [newProduct, setNewProduct] = useState({
     title: "",
     price: 500,
-    description: "Your perfect pack for everyday use and walks in the forest.",
+    description: "",
     category: "",
     image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png",
     rating: { rate: 0, count: 0 },
@@ -51,8 +51,7 @@ const NewProduct = () => {
         setNewProduct({
           title: "",
           price: 500,
-          description:
-            "Your perfect pack for everyday use and walks in the forest.",
+          description: "",
           category: "",
           image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png",
           rating: { rate: 0, count: 0 },
@@ -146,6 +145,16 @@ const NewProduct = () => {
             label="Image URL"
             variant="outlined"
             fullWidth
+            onChange={handleChange}
+          />
+          <TextField
+            value={newProduct.description}
+            name="description"
+            label="Description"
+            variant="outlined"
+            fullWidth
+            multiline
+            rows={3}
             onChange={handleChange}
           />
 

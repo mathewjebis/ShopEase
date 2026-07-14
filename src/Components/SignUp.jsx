@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import {
   Paper,
   Typography,
@@ -47,7 +47,7 @@ const SignUp = () => {
     formState: { errors },
   } = useForm({ resolver: yupResolver(schema) });
 
-  const handleData = (data) => {
+  const handleData = () => {
     setSuccess(true);
     reset();
     setTimeout(() => {
@@ -159,7 +159,7 @@ const SignUp = () => {
           </Button>
           <Button
             variant="text"
-            onClick={() => navigate("/login/jebis")}
+            onClick={() => navigate("/login/Guest")}
             sx={{ color: "#666" }}
           >
             Already have an account? Login

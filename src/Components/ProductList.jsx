@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Box,
   Grid,
@@ -116,7 +115,8 @@ const ProductList = () => {
         <Box sx={{ textAlign: "center", color: "#dc2626", padding: 5 }}>
           <Typography>Error: {error}</Typography>
           <Typography>
-            Make sure your JSON server is running on port 4000
+            The product API may be waking up — please wait a moment and
+            refresh.
           </Typography>
         </Box>
       )}

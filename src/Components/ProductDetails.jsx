@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import {
   Box,
@@ -26,13 +26,21 @@ const ProductDetails = () => {
   const [error, setError] = useState("");
 
   useEffect(() => {
-    setLoading(true);
-    setError("");
-    axios
-      .get(`https://shopease-api-7zhl.onrender.com/products/${id}`)
-      .then((res) => setProduct(res.data))
-      .catch(() => setError("Could not load this product."))
-      .finally(() => setLoading(false));
+    const fetchProduct = async () => {
+      setLoading(true);
+      setError("");
+      try {
+        const res = await axios.get(
+          `https://shopease-api-7zhl.onrender.com/products/${id}`,
+        );
+        setProduct(res.data);
+      } catch {
+        setError("Could not load this product.");
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchProduct();
   }, [id]);
 
   const addItemToCart = () => {

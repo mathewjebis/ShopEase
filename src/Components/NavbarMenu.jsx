@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import {
   AppBar,
   Toolbar,
@@ -20,9 +20,8 @@ import { useSelector } from "react-redux";
 const navLinks = [
   { label: "Home", to: "/" },
   { label: "Products", to: "/products" },
-  { label: "Todo App", to: "/todo" },
   { label: "Sign Up", to: "/sign-up" },
-  { label: "Login", to: "/login/Jebis" },
+  { label: "Login", to: "/login/Guest" },
 ];
 
 function NavbarMenu() {

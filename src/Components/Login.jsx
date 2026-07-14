@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import {
   Paper,
@@ -123,7 +123,11 @@ const Login = () => {
         </Box>
       </Paper>
 
-      <Snackbar open={success} autoHideDuration={1500}>
+      <Snackbar
+        open={success}
+        autoHideDuration={1500}
+        onClose={() => setSuccess(false)}
+      >
         <Alert severity="success" sx={{ width: "100%" }}>
           Welcome back, {user}!
         </Alert>

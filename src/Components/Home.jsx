@@ -1,4 +1,3 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
 const Home = () => {
   const navigate = useNavigate();
@@ -38,9 +37,9 @@ const Home = () => {
           <p>Create, update and delete products easily</p>
         </div>
         <div style={styles.featureCard}>
-          <div style={styles.featureIcon}>✅</div>
-          <h3>Todo Tracker</h3>
-          <p>Keep track of your tasks with our todo app</p>
+          <div style={styles.featureIcon}>⭐</div>
+          <h3>Rated Products</h3>
+          <p>Browse products with star ratings and reviews</p>
         </div>
       </div>
     </div>

@@ -1,6 +1,6 @@
 # ShopEase - React E-Commerce App
 
-A fully functional e-commerce application built with React, featuring product management, wishlist, todo app, and user authentication forms.
+A fully functional e-commerce application built with React, featuring product management, wishlist, and user authentication forms.
 
 ## Live Demo
 
@@ -30,13 +30,6 @@ A fully functional e-commerce application built with React, featuring product ma
 - Sign Up form with Yup validation
 - Login page with React Router params
 - Real-time field validation
-
-### Todo App
-
-- Add, Edit, Delete tasks
-- Mark tasks as complete
-- Task stats counter (Total, Done, Pending)
-- Keyboard support
 
 ### General
 
@@ -75,7 +68,6 @@ A fully functional e-commerce application built with React, featuring product ma
 
 - Material UI (MUI)
 - SweetAlert2
-- React Icons (used in the Todo App only)
 
 ## Project Structure
 
@@ -95,8 +87,6 @@ src/
 │   ├── NewProduct.jsx
 │   ├── UpdateProduct.jsx
 │   ├── WishList.jsx
-│   ├── Todoapp.jsx
-│   ├── Content.jsx
 │   └── NotFound.jsx
 ├── custom-hook/
 │   └── useFetch.js
@@ -155,7 +145,6 @@ Create a `db.json` file in the root:
 
 - The products API is powered by **json-server**, a mock REST API for prototyping — not a production database. A real Express + MongoDB backend (with Passport.js authentication) is in progress as a separate project.
 - The Login/Sign Up forms are UI-complete but not yet wired to a real authentication backend.
-- The Todo App is a separate practice component bundled into this project, unrelated to the e-commerce functionality.
 
 ## React Concepts Used
 

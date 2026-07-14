@@ -1,4 +1,3 @@
-import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
   Box,
@@ -111,7 +110,15 @@ const WishList = () => {
 
       <Grid container spacing={2.5}>
         {cartProducts.map((product) => (
-          <Grid item xs={12} sm={6} md={4} lg={3} key={product.id}>
+          <Grid
+            key={product.id}
+            size={{
+              xs: 12,
+              sm: 6,
+              md: 4,
+              lg: 3,
+            }}
+          >
             <Card
               sx={{
                 height: "100%",
